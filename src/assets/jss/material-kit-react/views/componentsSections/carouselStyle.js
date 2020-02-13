@@ -21,7 +21,7 @@ const carouselStyle = theme => ({
       height: "350px"
     },
     [theme.breakpoints.up("md")]: {
-      height: "500px"
+      height: "550px"
     }
   }
 });
