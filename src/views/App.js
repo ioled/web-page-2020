@@ -6,11 +6,13 @@ import React from "react";
 
 // core components
 import SectionNavbar from "./Components/Sections/SectionNavbars";
+import SectionCarousel from "./Components/Sections/SectionCarousel";
 
 export default function App() {
   return (
     <div>
       <SectionNavbar />
+      <SectionCarousel />
     </div>
   );
 }

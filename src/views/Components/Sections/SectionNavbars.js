@@ -36,85 +36,78 @@ export default function SectionNavbars() {
   //REACT
   //Components created with functions doesn't need render() method.
   return (
-    <div className={classes.section}>
-      <div id="navbar" className={classes.navbar}>
-        <div className={classes.navigation}>
-          <Header
-            brand="iOLED LOGO | iOLED"
-            color="dark"
-            rightLinks={
-              <List className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Inicio
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Sobre iOLED
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Servicios
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Desarrollo
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Contacto
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Blog
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button className={classes.miioled} type="button">
-                    Mi iOLED
-                  </Button>
-                </ListItem>
-              </List>
-            }
-          />
-        </div>
-        <Button type="button">Default</Button>
-      </div>
-    </div>
+    <Header
+      brand="iOLED LOGO | iOLED"
+      color="dark"
+      rightLinks={
+        <List className={classes.list}>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Inicio
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Sobre iOLED
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Servicios
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Desarrollo
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Contacto
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Blog
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button className={classes.miioled} type="button">
+              Mi iOLED
+            </Button>
+          </ListItem>
+        </List>
+      }
+    />
   );
 }
