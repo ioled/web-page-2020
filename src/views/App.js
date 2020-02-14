@@ -1,20 +1,17 @@
 import React from "react";
-// @material-ui/core components
-// import { makeStyles } from "@material-ui/core/styles";
-
-// @material-ui/icons
 
 // core components
 import SectionNavbar from "./Components/Sections/SectionNavbars";
 import SectionCarousel from "./Components/Sections/SectionCarousel";
 import SectionVideo from "./Components/Sections/SectionVideo";
+import SectionLogin from "./Components/Sections/SectionLogin";
 
 export default function App() {
   return (
-    <div>
+    <React.Fragment>
       <SectionNavbar />
       <SectionCarousel />
       <SectionVideo />
-    </div>
+    </React.Fragment>
   );
 }

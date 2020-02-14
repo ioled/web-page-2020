@@ -10,13 +10,15 @@ const videoStyle = theme => ({
 
   playerWrapper: {
     position: "relative",
-    paddingTop: "56.25%"
+    paddingTop: "56.25%",
+    width: "100%"
   },
 
   reactPlayer: {
     position: "absolute",
     top: "0",
-    left: "0"
+    left: "0",
+    overflowY: "hidden"
   },
 
   videoContainer: {

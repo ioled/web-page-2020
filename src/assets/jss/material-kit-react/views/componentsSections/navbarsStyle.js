@@ -53,6 +53,7 @@ const navbarsStyle = theme => ({
     marginLeft: "5px"
   },
 
+  //OWN DESIGN
   miioled: {
     border: "1px solid white",
     borderRadius: "20px",
