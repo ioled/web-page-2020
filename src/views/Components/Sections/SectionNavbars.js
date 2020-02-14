@@ -36,7 +36,11 @@ export default function SectionNavbars() {
     <Header
       color="dark"
       leftLinks={
-        <img src={ioledLogoNavbar} className={classes.ioledLogoNavbar} />
+        <img
+          src={ioledLogoNavbar}
+          alt="ioled-logo-navbar"
+          className={classes.ioledLogoNavbar}
+        />
       }
       rightLinks={
         <List className={classes.list}>
