@@ -12,7 +12,7 @@ import {
   drawerWidth
 } from "assets/jss/material-kit-react.js";
 
-const headerStyle = {
+const headerStyle = theme => ({
   appBar: {
     display: "flex",
     border: "0",
@@ -47,7 +47,10 @@ const headerStyle = {
     flexWrap: "nowrap"
   },
   flex: {
-    flex: 1
+    flex: 1,
+    [theme.breakpoints.down("xs")]: {
+      position: "absolute"
+    }
   },
   title: {
     ...defaultFont,
@@ -145,6 +148,6 @@ const headerStyle = {
     paddingLeft: "0",
     ...transition
   }
-};
+});
 
 export default headerStyle;

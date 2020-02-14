@@ -72,10 +72,10 @@ export default function Header(props) {
             brandComponent
           )}
         </div>
-        <Hidden smDown implementation="css">
+        <Hidden mdDown implementation="css">
           {rightLinks}
         </Hidden>
-        <Hidden mdUp>
+        <Hidden lgUp>
           <IconButton
             color="inherit"
             aria-label="open drawer"
