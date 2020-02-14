@@ -1,5 +1,3 @@
-import { container } from "assets/jss/material-kit-react.js";
-
 const videoStyle = theme => ({
   marginAuto: {
     marginLeft: "auto !important",

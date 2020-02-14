@@ -67,9 +67,7 @@ export default function Header(props) {
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
           {leftLinks !== undefined ? (
-            <Hidden smDown implementation="css">
-              {leftLinks}
-            </Hidden>
+            <Hidden implementation="css">{leftLinks}</Hidden>
           ) : (
             brandComponent
           )}

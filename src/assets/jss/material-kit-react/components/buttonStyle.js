@@ -36,9 +36,8 @@ const buttonStyle = {
     cursor: "pointer",
     "&:hover,&:focus": {
       color: "#FFFFFF",
-      backgroundColor: grayColor,
       boxShadow:
-        "0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2)"
+        "0 14px 26px -12px #00EAA6, 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2)"
     },
     "& .fab,& .fas,& .far,& .fal,& .material-icons": {
       position: "relative",

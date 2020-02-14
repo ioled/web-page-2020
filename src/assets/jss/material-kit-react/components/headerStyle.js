@@ -16,9 +16,7 @@ const headerStyle = {
   appBar: {
     display: "flex",
     border: "0",
-    borderRadius: "3px",
     padding: "0.625rem 0",
-    // marginBottom: "20px",
     color: "#555",
     width: "100%",
     backgroundColor: "#fff",
@@ -28,8 +26,8 @@ const headerStyle = {
     alignItems: "center",
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
-    position: "relative",
-    zIndex: "unset"
+    position: "sticky",
+    zIndex: "4" //overlays points and arrows from SectionCarousel
   },
   absolute: {
     position: "absolute",

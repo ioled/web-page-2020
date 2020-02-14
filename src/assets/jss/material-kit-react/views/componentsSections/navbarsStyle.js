@@ -54,9 +54,25 @@ const navbarsStyle = theme => ({
   },
 
   miioled: {
-    background: "none",
-    paddingLeft: "1em",
-    paddingRight: "1em"
+    border: "1px solid white",
+    borderRadius: "20px",
+    backgroundColor: "#212121",
+    "&:hover": {
+      color: "#00EAA6",
+      borderColor: "#00EAA6"
+    }
+  },
+
+  ioledLogoNavbar: {
+    [theme.breakpoints.up("xs")]: {
+      height: "30px"
+    },
+    [theme.breakpoints.up("sm")]: {
+      height: "35px"
+    },
+    [theme.breakpoints.up("md")]: {
+      height: "40px"
+    }
   }
 });
 
