@@ -1,18 +1,18 @@
 import React from "react";
-// react component for creating beautiful carousel
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
+
+// REACT-SLICK (CAROUSEL)
+//This
 import Carousel from "react-slick";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-import LocationOn from "@material-ui/icons/LocationOn";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-
-import image1 from "assets/img/bg.jpg";
-import image2 from "assets/img/bg2.jpg";
-import image3 from "assets/img/bg3.jpg";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 
@@ -20,57 +20,52 @@ const useStyles = makeStyles(styles);
 
 export default function SectionCarousel() {
   const classes = useStyles();
+
+  //CAROUSEL
+  //CAROUSEL'S ME
   const settings = {
-    dots: true,
+    dotsClass: "slick-dots",
+    // dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false
   };
+
   return (
-    <div className={classes.section}>
-      <div className={classes.container}>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
-            <Card carousel>
-              <Carousel {...settings}>
-                <div>
-                  <img src={image1} alt="First slide" className="slick-image" />
-                  <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
-                    </h4>
-                  </div>
-                </div>
-                <div>
-                  <img
-                    src={image2}
-                    alt="Second slide"
-                    className="slick-image"
-                  />
-                  <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Somewhere Beyond, United States
-                    </h4>
-                  </div>
-                </div>
-                <div>
-                  <img src={image3} alt="Third slide" className="slick-image" />
-                  <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
-                    </h4>
-                  </div>
-                </div>
-              </Carousel>
-            </Card>
-          </GridItem>
-        </GridContainer>
-      </div>
-    </div>
+    <GridContainer>
+      <GridItem xs={12} sm={12} md={12} className={classes.marginAuto}>
+        {/* CAROUSEL */}
+        <Carousel {...settings}>
+          <Box className={classes.firstSection}>
+            {/* FIRST CAROUSEL'S SECTION*/}
+            <Typography
+              className={classes.firstSectionTitle}
+              variant="h4"
+              component="h1"
+            >
+              <span className={classes.firstSectionTitleBox}>
+                CULTIVO INTELIGENTE HOY CON <strong>iOLED</strong>
+              </span>
+            </Typography>
+            <div className={classes.buttonBox}>
+              <Button
+                className={classes.firstSectionButton}
+                variant="contained"
+              >
+                Suscribir
+              </Button>
+            </div>
+          </Box>
+
+          {/* SECOND CAROUSEL'S SECTION */}
+
+          <div className={classes.secondSection}>
+            <h1>Second Carousel Section</h1>
+          </div>
+        </Carousel>
+      </GridItem>
+    </GridContainer>
   );
 }

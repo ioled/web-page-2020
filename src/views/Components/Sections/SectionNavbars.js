@@ -13,16 +13,13 @@ import Header from "components/Header/Header.js";
 // import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
-//ASSETS
-//---|
-//--v
-
-// import image from "assets/img/bg.jpg"; LAS IMAÁGENES VAN EN LOS ASSETS
-// import profileImage from "assets/img/faces/avatar.jpg"; LA FOTO DE PERFIL ESTA EN ASSETS
-
 //STYLES***
 //This importation looks like it has something to see with css/styles
 import styles from "assets/jss/material-kit-react/views/componentsSections/navbarsStyle.js";
+
+//LOGO IMAGE NAVBAR
+//Import image logo-ioled-navbar as a React Component
+import ioledLogoNavbar from "./../../../assets/img/logo-ioled-navbar.png";
 
 //MAKESTYLES
 //Makestyles to edit styles with React
@@ -36,85 +33,84 @@ export default function SectionNavbars() {
   //REACT
   //Components created with functions doesn't need render() method.
   return (
-    <div className={classes.section}>
-      <div id="navbar" className={classes.navbar}>
-        <div className={classes.navigation}>
-          <Header
-            brand="iOLED LOGO | iOLED"
-            color="dark"
-            rightLinks={
-              <List className={classes.list}>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Inicio
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Sobre iOLED
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Servicios
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Desarrollo
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Contacto
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Blog
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button className={classes.miioled} type="button">
-                    Mi iOLED
-                  </Button>
-                </ListItem>
-              </List>
-            }
-          />
-        </div>
-        <Button type="button">Default</Button>
-      </div>
-    </div>
+    <Header
+      color="dark"
+      leftLinks={
+        <img
+          src={ioledLogoNavbar}
+          alt="ioled-logo-navbar"
+          className={classes.ioledLogoNavbar}
+        />
+      }
+      rightLinks={
+        <List className={classes.list}>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Inicio
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Sobre iOLED
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Servicios
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Desarrollo
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Contacto
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              Blog
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button className={classes.miioled} type="button">
+              Mi iOLED
+            </Button>
+          </ListItem>
+        </List>
+      }
+    />
   );
 }
