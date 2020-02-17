@@ -1,4 +1,7 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
+
+import { Typography } from "@material-ui/core";
 
 //REACT PLAYER
 //Library to embed videos from youtube in a app with React
@@ -6,10 +9,6 @@ import ReactPlayer from "react-player";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
-// core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/videoStyle.js";
 
@@ -19,24 +18,13 @@ export default function SectionCarousel() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={12} className={classes.marginAuto}>
-          <div className={classes.titleContainer}>
-            <h2>Sección 2: VIDEO</h2>
-            <p className={classes.typography}>
-              Amet laborum ullamco esse ipsum do eiusmod sint. Aute sunt nisi in
-              et reprehenderit sunt nostrud nulla exercitation sint laboris.
-              Reprehenderit ea dolore in fugiat non amet veniam magna
-              laboris.Amet laborum ullamco esse ipsum do eiusmod sint.Amet
-              laborum ullamco esse ipsum do eiusmod sint. Aute sunt nisi in et
-              reprehenderit sunt nostrud nulla exercitation sint laboris.
-              Reprehenderit ea dolore in fugiat non amet veniam magna
-              laboris.Amet laborum ullamco esse ipsum do eiusmod sint.
-            </p>
-          </div>
-        </GridItem>
-      </GridContainer>
+    <Box className={classes.sectionVideoContainer}>
+      <div className={classes.titleContainer}>
+        <Typography variant="h4" className={classes.videoTitle}>
+          iOLED
+        </Typography>
+      </div>
+
       <div className={classes.videoContainer}>
         <div className={classes.playerWrapper}>
           <ReactPlayer
@@ -47,6 +35,6 @@ export default function SectionCarousel() {
           />
         </div>
       </div>
-    </React.Fragment>
+    </Box>
   );
 }

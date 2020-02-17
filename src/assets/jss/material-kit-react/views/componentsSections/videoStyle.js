@@ -1,11 +1,40 @@
 const videoStyle = theme => ({
-  marginAuto: {
-    marginLeft: "auto !important",
-    marginRight: "auto !important"
+  sectionVideoContainer: {
+    backgroundColor: "#FFFFFF",
+    paddingTop: "2.2em",
+    paddingBottom: "2.2em"
   },
+
   titleContainer: {
-    margin: "1em",
-    textAlign: "center"
+    marginBottom: "0.5em",
+    marginLeft: "auto !important",
+    marginRight: "auto !important",
+    maxWidth: "770px",
+
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "6%"
+    }
+  },
+
+  videoTitle: {
+    color: "#282321",
+
+    [theme.breakpoints.up("xs")]: {
+      fontSize: "1.6em"
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "1.8em"
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "2em"
+    }
+  },
+
+  videoContainer: {
+    marginLeft: "auto !important",
+    marginRight: "auto !important",
+    maxWidth: "800px",
+    padding: "0 1em"
   },
 
   playerWrapper: {
@@ -19,26 +48,6 @@ const videoStyle = theme => ({
     top: "0",
     left: "0",
     overflowY: "hidden"
-  },
-
-  videoContainer: {
-    marginLeft: "auto !important",
-    marginRight: "auto !important",
-    maxWidth: "800px",
-    paddingRight: "2em",
-    paddingLeft: "2em"
-  },
-
-  typography: {
-    [theme.breakpoints.up("xs")]: {
-      fontSize: "0.8em"
-    },
-    [theme.breakpoints.up("sm")]: {
-      fontSize: "0.9em"
-    },
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1em"
-    }
   }
 });
 
