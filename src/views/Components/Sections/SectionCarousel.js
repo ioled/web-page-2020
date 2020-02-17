@@ -24,8 +24,6 @@ export default function SectionCarousel() {
   //CAROUSEL
   //CAROUSEL'S ME
   const settings = {
-    dotsClass: "slick-dots",
-    // dots: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -46,7 +44,7 @@ export default function SectionCarousel() {
               component="h1"
             >
               <span className={classes.firstSectionTitleBox}>
-                CULTIVO INTELIGENTE HOY CON <strong>iOLED</strong>
+                COMIENZA TU CULTIVO INTELIGENTE HOY CON <strong>iOLED</strong>
               </span>
             </Typography>
             <div className={classes.buttonBox}>

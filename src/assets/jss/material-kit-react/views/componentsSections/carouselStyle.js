@@ -42,8 +42,9 @@ const carouselStyle = theme => ({
     textAlign: "center",
 
     [theme.breakpoints.up("xs")]: {
-      paddingTop: "98px",
-      fontSize: "0.8em"
+      paddingTop: "94px",
+      fontSize: "0.8em",
+      margin: "0 2.5em"
     },
     [theme.breakpoints.up("sm")]: {
       paddingTop: "163px",
