@@ -33,7 +33,7 @@ const carouselStyle = theme => ({
   firstSectionTitleBox: {
     padding: "0.3em",
     borderRadius: "30px",
-    background: "rgba(42, 42, 42, 0.3)"
+    background: "rgba(42, 42, 42, 0.1)"
   },
 
   firstSectionTitle: {
@@ -77,9 +77,9 @@ const carouselStyle = theme => ({
     marginLeft: "auto",
     marginRight: "auto",
     borderRadius: "30px",
-    border: "2px solid #00EAA6",
     color: "white",
     background: "transparent",
+    verticalAlign: "middle",
 
     "&:hover": {
       color: "#00EAA6",
@@ -88,23 +88,19 @@ const carouselStyle = theme => ({
     },
 
     [theme.breakpoints.up("xs")]: {
-      border: "1px solid #00EAA6",
-      height: "18px",
-      width: "7em",
-      fontSize: "0.7em"
+      width: "9em",
+      fontSize: "0.7em",
+      border: "1px solid #00EAA6"
     },
 
     [theme.breakpoints.up("sm")]: {
-      border: "1px solid #00EAA6",
-      height: "25px",
-      fontSize: "0.8em"
+      fontSize: "0.8em",
+      border: "2px solid #00EAA6"
     },
     [theme.breakpoints.up("md")]: {
-      height: "30px",
       fontSize: "0.9em"
     },
     [theme.breakpoints.up("lg")]: {
-      height: "35px",
       fontSize: "1em"
     }
   },
