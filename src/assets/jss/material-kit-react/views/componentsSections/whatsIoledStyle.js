@@ -8,7 +8,7 @@ const ioledStyles = theme => ({
   imageSection: {
     width: "100%",
 
-    [theme.breakpoints.up("xs")]: { height: "275px", paddingTop: "1em" },
+    [theme.breakpoints.down("xs")]: { display: "none" },
     [theme.breakpoints.up("sm")]: { height: "325px", paddingTop: "0" },
     [theme.breakpoints.up("md")]: { height: "450px" },
     [theme.breakpoints.up("lg")]: { height: "500px" }
@@ -23,10 +23,10 @@ const ioledStyles = theme => ({
 
   textSectionTitle: {
     color: "#282321",
-    paddingTop: "1.5em",
+
     paddingLeft: "1.5em",
-    [theme.breakpoints.up("xs")]: { fontSize: "1.6em" },
-    [theme.breakpoints.up("sm")]: { fontSize: "1.8em" },
+    [theme.breakpoints.up("xs")]: { fontSize: "1.6em", paddingTop: "0.8em" },
+    [theme.breakpoints.up("sm")]: { fontSize: "1.8em", paddingTop: "1.5em" },
     [theme.breakpoints.up("md")]: { fontSize: "2em" },
     [theme.breakpoints.up("lg")]: { fontSize: "2em" }
   },
