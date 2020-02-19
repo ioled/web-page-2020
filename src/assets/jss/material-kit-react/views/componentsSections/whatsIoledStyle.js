@@ -24,14 +24,18 @@ const ioledStyles = theme => ({
   textSectionTitle: {
     color: "#282321",
 
-    paddingLeft: "1.5em",
-    [theme.breakpoints.up("xs")]: { fontSize: "1.6em", paddingTop: "0.8em" },
+    [theme.breakpoints.up("xs")]: {
+      fontSize: "1.4em",
+      paddingTop: "0.8em",
+      paddingLeft: "1.5em"
+    },
     [theme.breakpoints.up("sm")]: { fontSize: "1.8em", paddingTop: "1.5em" },
     [theme.breakpoints.up("md")]: { fontSize: "2em" },
     [theme.breakpoints.up("lg")]: { fontSize: "2em" }
   },
 
   textSectionParagraph: {
+    textAlign: "justify",
     [theme.breakpoints.up("xs")]: { fontSize: "0.85em", padding: "1.5em" },
     [theme.breakpoints.up("sm")]: { fontSize: "0.85em", padding: "2em" },
     [theme.breakpoints.up("md")]: { fontSize: "1em", padding: "3em" },
