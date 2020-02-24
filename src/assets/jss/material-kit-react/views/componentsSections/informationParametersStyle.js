@@ -4,50 +4,68 @@ const informationParametersStyles = theme => ({
     padding: "2em"
   },
 
-  gridItemTitle: {
+  flexItemTitle: {
     display: "flex",
     alignItems: "center",
-    color: "#282321",
-    [theme.breakpoints.down("xs")]: {},
-    [theme.breakpoints.up("sm")]: {},
-    [theme.breakpoints.up("md")]: {},
-    [theme.breakpoints.up("lg")]: {}
+
+    color: "#282321"
   },
 
   imageCloud: {
     width: "45px",
-    margin: "1em"
+    margin: "1em",
+    transition: "transform .4s ease",
+    "&:hover": {
+      transform: "scale(1.5)"
+    }
   },
 
   imageTimer: {
     width: "40px",
-    margin: "1em"
+    margin: "1em",
+    transition: "transform .4s ease",
+    "&:hover": {
+      transform: "scale(1.5)"
+    }
   },
 
   imageLightning: {
     width: "20px",
-    margin: "1em"
+    margin: "1em",
+    transition: "transform .4s ease",
+    "&:hover": {
+      transform: "scale(1.5)"
+    }
   },
 
   imageTemperature: {
     width: "20px",
-    margin: "1em"
+    margin: "1em",
+    transition: "transform .4s ease",
+    "&:hover": {
+      transform: "scale(1.5)"
+    }
+  },
+
+  title: {
+    marginLeft: "0.5em",
+    [theme.breakpoints.up("xs")]: { fontSize: "0.9em" },
+    [theme.breakpoints.up("sm")]: { fontSize: "1.1em" },
+    [theme.breakpoints.up("md")]: { fontSize: "1.3em" },
+    [theme.breakpoints.up("lg")]: { fontSize: "1.5em" }
   },
 
   gridItem: {
-    margin: "1em",
-    [theme.breakpoints.down("xs")]: {},
-    [theme.breakpoints.up("sm")]: {},
-    [theme.breakpoints.up("md")]: {},
-    [theme.breakpoints.up("lg")]: {}
+    margin: "1em"
   },
 
-  titleGridItem: {}
+  gridItemParagraph: {
+    textAlign: "justify",
+    [theme.breakpoints.up("xs")]: { fontSize: "0.85em" },
+    [theme.breakpoints.up("sm")]: { fontSize: "0.85em" },
+    [theme.breakpoints.up("md")]: { fontSize: "1em" },
+    [theme.breakpoints.up("lg")]: { fontSize: "1em" }
+  }
 });
 
 export default informationParametersStyles;
-
-// [theme.breakpoints.down("xs")]: {},
-// [theme.breakpoints.up("sm")]: {},
-// [theme.breakpoints.up("md")]: {},
-// [theme.breakpoints.up("lg")]: {}

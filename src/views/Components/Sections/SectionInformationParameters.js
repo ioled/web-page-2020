@@ -27,9 +27,9 @@ export default function SectionCarousel() {
       className={classes.gridContainer}
     >
       <Grid item md={5} className={classes.gridItem}>
-        <Box className={classes.gridItemTitle}>
-          <img src={cloud} className={classes.imageCloud} />{" "}
-          <Typography>
+        <Box className={classes.flexItemTitle}>
+          <img src={cloud} alt="cloud" className={classes.imageCloud} />{" "}
+          <Typography class={classes.title}>
             <strong>HUMEDAD</strong>
           </Typography>
         </Box>
@@ -41,9 +41,9 @@ export default function SectionCarousel() {
         </Typography>
       </Grid>
       <Grid item md={5} className={classes.gridItem}>
-        <Box className={classes.gridItemTitle}>
-          <img src={timer} className={classes.imageTimer} />{" "}
-          <Typography>
+        <Box className={classes.flexItemTitle}>
+          <img src={timer} alt="timer" className={classes.imageTimer} />{" "}
+          <Typography class={classes.title}>
             <strong>TIMER</strong>
           </Typography>
         </Box>
@@ -55,9 +55,13 @@ export default function SectionCarousel() {
         </Typography>
       </Grid>
       <Grid item md={5} className={classes.gridItem}>
-        <Box className={classes.gridItemTitle}>
-          <img src={lightning} className={classes.imageLightning} />{" "}
-          <Typography>
+        <Box className={classes.flexItemTitle}>
+          <img
+            src={lightning}
+            alt="lightning"
+            className={classes.imageLightning}
+          />{" "}
+          <Typography class={classes.title}>
             <strong>CONSUMO</strong>
           </Typography>
         </Box>
@@ -69,9 +73,13 @@ export default function SectionCarousel() {
         </Typography>
       </Grid>
       <Grid item md={5} className={classes.gridItem}>
-        <Box className={classes.gridItemTitle}>
-          <img src={temperature} className={classes.imageTemperature} />{" "}
-          <Typography>
+        <Box className={classes.flexItemTitle}>
+          <img
+            src={temperature}
+            alt="temperature"
+            className={classes.imageTemperature}
+          />{" "}
+          <Typography class={classes.title}>
             <strong>TEMPERATURA</strong>
           </Typography>
         </Box>

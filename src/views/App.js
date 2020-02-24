@@ -2,7 +2,7 @@ import React from "react";
 
 // core components
 import SectionNavbar from "./Components/Sections/SectionNavbars";
-import SectionCarousel from "./Components/Sections/SectionCarousel";
+import SectionHeader from "./Components/Sections/SectionHeader";
 import SectionVideo from "./Components/Sections/SectionVideo";
 import SectionWhatsIoled from "./Components/Sections/SectionWhatsIoled";
 
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <React.Fragment>
       <SectionNavbar />
-      <SectionCarousel />
+      <SectionHeader />
       <SectionVideo />
       <SectionWhatsIoled />
       <SectionInformationParameters />
