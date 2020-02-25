@@ -52,14 +52,18 @@ const navbarsStyle = theme =>
     },
 
     listElement: {
-      margin: "0 1em"
+      margin: "0",
+      padding: "0"
     },
 
     listLink: {
       color: "#FFFFFF",
       cursor: "pointer",
+      margin: "0",
+      padding: "0.5em 1.5em",
+
       "&:hover": {
-        color: "#FFFFFF"
+        color: "#00EAA6"
       }
     },
 

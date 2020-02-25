@@ -2,7 +2,6 @@ import image1 from "assets/img/ioled-banner.png";
 
 const headerStyle = theme => ({
   header: {
-    border: "3px solid red",
     backgroundImage: `url(${image1})`,
 
     backgroundRepeat: "no-repeat",

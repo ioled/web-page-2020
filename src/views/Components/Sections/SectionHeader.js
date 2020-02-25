@@ -14,7 +14,7 @@ export default function SectionCarousel() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.header}>
+    <Box className={classes.header} id="header">
       <Typography className={classes.title} variant="h4" component="h1">
         <span className={classes.titleBox}>
           COMIENZA TU CULTIVO INTELIGENTE HOY CON <strong>iOLED</strong>
