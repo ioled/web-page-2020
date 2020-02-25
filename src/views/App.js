@@ -14,8 +14,9 @@ export default function App() {
     <React.Fragment>
       <SectionNavbar />
       <SectionHeader />
-      <SectionVideo />
       <SectionWhatsIoled />
+      <SectionVideo />
+
       <SectionInformationParameters />
       <SectionFooter />
     </React.Fragment>

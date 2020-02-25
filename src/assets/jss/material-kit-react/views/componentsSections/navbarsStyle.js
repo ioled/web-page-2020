@@ -61,9 +61,31 @@ const navbarsStyle = theme =>
       cursor: "pointer",
       margin: "0",
       padding: "0.5em 1.5em",
-
+      fontSize: "0.8em",
       "&:hover": {
         color: "#00EAA6"
+      }
+    },
+
+    listLinkResponsive: {
+      color: "#FFFFFF",
+      cursor: "pointer",
+      padding: "0.5em 2em",
+      marginBottom: "0.5em",
+      "&:hover": {
+        color: "#00EAA6"
+      }
+    },
+
+    listLinkText: {
+      marginLeft: "1em",
+      fontSize: "0.8em",
+
+      [theme.breakpoints.up("xs")]: {
+        fontSize: "0.7em"
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "0.8em"
       }
     },
 

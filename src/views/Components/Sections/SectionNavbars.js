@@ -4,12 +4,16 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Box from "@material-ui/core/Box";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
+
+import HomeIcon from "@material-ui/icons/Home";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import InfoIcon from "@material-ui/icons/Info";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 
 import { Link } from "react-scroll";
 
@@ -42,63 +46,72 @@ class SectionNavbars extends React.Component {
         onKeyDown={this.toggleDrawer(false)}
       >
         <Box>
-          <List component="nav" aria-label="main mailbox folders">
-            <ListItem button>
-              <Link
-                activeClass="fixed"
-                to="header"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className={classes.listLink}
-                onClick={this.toggleDrawer(false)}
-              >
-                Inicio
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link
-                activeClass="active"
-                to="video"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className={classes.listLink}
-                onClick={this.toggleDrawer(false)}
-              >
-                Video
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link
-                activeClass="active"
-                to="whats-ioled"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className={classes.listLink}
-                onClick={this.toggleDrawer(false)}
-              >
-                Sobre Nosotros
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link
-                activeClass="active"
-                to="information-parameters"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className={classes.listLink}
-                onClick={this.toggleDrawer(false)}
-              >
-                Beneficios
-              </Link>
-            </ListItem>
+          <List component="nav">
+            <Link
+              activeClass="active"
+              to="header"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
+            >
+              <ListItem className={classes.listLinkResponsive}>
+                <HomeIcon />
+                <Typography className={classes.listLinkText}>INICIO</Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="whats-ioled"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
+            >
+              <ListItem className={classes.listLinkResponsive}>
+                <InfoIcon />
+                <Typography className={classes.listLinkText}>
+                  SOBRE NOSOTROS
+                </Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="video"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
+            >
+              <ListItem className={classes.listLinkResponsive}>
+                <PlayArrowIcon />
+                <Typography className={classes.listLinkText}>VIDEO</Typography>
+              </ListItem>
+            </Link>
+
+            
+
+            <Link
+              activeClass="active"
+              to="information-parameters"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
+            >
+              <ListItem className={classes.listLinkResponsive}>
+                <AttachMoneyIcon />
+                <Typography className={classes.listLinkText}>
+                  BENEFICIOS
+                </Typography>
+              </ListItem>
+            </Link>
           </List>
         </Box>
       </div>
@@ -131,19 +144,7 @@ class SectionNavbars extends React.Component {
                     offset={-70}
                     duration={500}
                   >
-                    <Typography className={classes.listLink}>Inicio</Typography>
-                  </Link>
-                </li>
-                <li className={classes.listElement}>
-                  <Link
-                    activeClass="active"
-                    to="video"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    <Typography className={classes.listLink}>Video</Typography>
+                    <Typography className={classes.listLink}>INICIO</Typography>
                   </Link>
                 </li>
                 <li className={classes.listElement}>
@@ -156,10 +157,23 @@ class SectionNavbars extends React.Component {
                     duration={500}
                   >
                     <Typography className={classes.listLink}>
-                      Sobre Nosotros
+                      SOBRE NOSOTROS
                     </Typography>
                   </Link>
                 </li>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="active"
+                    to="video"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>VIDEO</Typography>
+                  </Link>
+                </li>
+                
                 <li className={classes.listElement}>
                   <Link
                     activeClass="active"
@@ -170,7 +184,7 @@ class SectionNavbars extends React.Component {
                     duration={500}
                   >
                     <Typography className={classes.listLink}>
-                      Beneficios
+                      BENEFICIOS
                     </Typography>
                   </Link>
                 </li>

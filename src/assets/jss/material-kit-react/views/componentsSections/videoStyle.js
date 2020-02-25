@@ -35,7 +35,7 @@ const videoStyle = theme => ({
     marginRight: "auto !important",
     maxWidth: "800px",
 
-    [theme.breakpoints.up("xs")]: { padding: "0 1em" },
+    [theme.breakpoints.up("xs")]: { padding: "0 2em" },
     [theme.breakpoints.up("sm")]: { padding: "0 4em" },
     [theme.breakpoints.up("md")]: { padding: "0 3em" },
     [theme.breakpoints.up("lg")]: { padding: "0 0" }
