@@ -1,8 +1,26 @@
 const videoStyle = theme => ({
   sectionVideoContainer: {
     backgroundColor: "#FFFFFF",
-    paddingTop: "2.2em",
-    paddingBottom: "2.2em"
+
+    borderTop: "1px solid #121211",
+    borderBottom: "1px solid #121211",
+
+    [theme.breakpoints.up("xs")]: {
+      paddingTop: "1em",
+      paddingBottom: "1em"
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: "1.6em",
+      paddingBottom: "1.6em"
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "2.2em",
+      paddingBottom: "2.2em"
+    },
+    [theme.breakpoints.up("lg")]: {
+      paddingTop: "2.2em",
+      paddingBottom: "2.2em"
+    }
   },
 
   titleContainer: {
@@ -20,7 +38,7 @@ const videoStyle = theme => ({
     color: "#282321",
 
     [theme.breakpoints.up("xs")]: {
-      fontSize: "1.4em"
+      fontSize: "1.2em"
     },
     [theme.breakpoints.up("sm")]: {
       fontSize: "1.8em"

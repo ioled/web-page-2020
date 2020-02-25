@@ -1,13 +1,13 @@
 const informationParametersStyles = theme => ({
   gridContainer: {
     background: "#FFFFFF",
-    padding: "2em"
+    padding: "2em",
+    [theme.breakpoints.down("xs")]: { padding: "0 1em" }
   },
 
   flexItemTitle: {
     display: "flex",
     alignItems: "center",
-
     color: "#282321"
   },
 

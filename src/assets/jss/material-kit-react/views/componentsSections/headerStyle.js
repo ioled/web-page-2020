@@ -74,6 +74,7 @@ const headerStyle = theme => ({
     color: "white",
     background: "transparent",
     verticalAlign: "middle",
+    padding: "0.1em 0",
 
     "&:hover": {
       color: "#00EAA6",

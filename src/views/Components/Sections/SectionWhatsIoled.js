@@ -33,10 +33,10 @@ export default function SectionCarousel() {
         <Typography variant="body1" className={classes.textSectionParagraph}>
           Somos una Startup de biotecnología en la industria de la cannabis en
           Chile, enfocados en mejorar la experiencia de los cultivadores,
-          desarrollando soluciones con iluminación led para Horticultura.
+          desarrollando soluciones con iluminación led para horticultura.
           Integrando tecnología IoT, pudiendo controlar y administrar el cultivo
-          de forma remota desde un smartphone, notebooks y pc, obteniendo
-          información en tiempo real de tu cultivo.
+          de forma remota desde un smartphone, tablets o computadoras
+          personales, obteniendo información en tiempo real de tu cultivo.
         </Typography>
       </Grid>
     </Grid>
