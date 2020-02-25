@@ -18,7 +18,7 @@ export default function SectionCarousel() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.sectionVideoContainer}>
+    <Box className={classes.sectionVideoContainer} id="video">
       <div className={classes.titleContainer}>
         <Typography variant="h4" className={classes.videoTitle}>
           iOLED

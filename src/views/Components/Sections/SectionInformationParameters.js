@@ -25,6 +25,7 @@ export default function SectionCarousel() {
       direction="row"
       justify="center"
       className={classes.gridContainer}
+      id="information-parameters"
     >
       <Grid item md={5} className={classes.gridItem}>
         <Box className={classes.flexItemTitle}>

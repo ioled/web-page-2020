@@ -21,6 +21,7 @@ export default function SectionCarousel() {
       direction="row"
       justify="center"
       className={classes.gridContainer}
+      id="whats-ioled"
     >
       <Grid item xs={8} sm={5} md={5} lg={5}>
         <img src={image} alt="whatsIoled" className={classes.imageSection} />

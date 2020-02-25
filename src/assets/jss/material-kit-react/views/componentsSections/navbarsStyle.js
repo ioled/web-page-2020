@@ -1,80 +1,80 @@
-import { container, title } from "assets/jss/material-kit-react.js";
-import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.js";
+import { createStyles } from "@material-ui/core/styles";
 
-const navbarsStyle = theme => ({
-  section: {
-    padding: "70px 0",
-    paddingTop: "0"
-  },
-  container,
-  title: {
-    ...title,
-    marginTop: "30px",
-    minHeight: "32px",
-    textDecoration: "none"
-  },
-  navbar: {
-    marginBottom: "-20px",
-    zIndex: "100",
-    position: "relative",
-    overflow: "hidden",
-    "& header": {
-      borderRadius: "0"
-    }
-  },
-  navigation: {
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    marginTop: "0",
-    minHeight: "740px"
-  },
-  formControl: {
-    margin: "0 !important",
-    paddingTop: "0"
-  },
-  inputRootCustomClasses: {
-    margin: "0!important"
-  },
-  searchIcon: {
-    width: "20px",
-    height: "20px",
-    color: "inherit"
-  },
-  ...headerLinksStyle(theme),
-  img: {
-    width: "40px",
-    height: "40px",
-    borderRadius: "50%"
-  },
-  imageDropdownButton: {
-    padding: "0px",
-    top: "4px",
-    borderRadius: "50%",
-    marginLeft: "5px"
-  },
-
-  //OWN DESIGN
-  miioled: {
-    border: "1px solid white",
-    borderRadius: "20px",
-    backgroundColor: "#212121",
-    "&:hover": {
-      color: "#00EAA6",
-      borderColor: "#00EAA6"
-    }
-  },
-
-  ioledLogoNavbar: {
-    [theme.breakpoints.up("xs")]: {
-      height: "30px"
+const navbarsStyle = theme =>
+  createStyles({
+    toolbar: {
+      background: "#121211"
     },
-    [theme.breakpoints.up("sm")]: {
-      height: "35px"
+
+    menuButton: {
+      marginRight: theme.spacing(2),
+      [theme.breakpoints.up("lg")]: {
+        display: "none"
+      }
     },
-    [theme.breakpoints.up("md")]: {
-      height: "40px"
+    titleBox: {
+      flexGrow: 3
+    },
+
+    ioledLogo: {
+      [theme.breakpoints.up("xs")]: {
+        width: "130px",
+        height: "auto",
+        marginLeft: "0.6em"
+      },
+      [theme.breakpoints.up("sm")]: {
+        width: "140px",
+        height: "auto",
+        marginLeft: "1.4em"
+      },
+      [theme.breakpoints.up("md")]: {
+        width: "150px",
+        height: "auto",
+        marginLeft: "2em"
+      },
+      [theme.breakpoints.up("lg")]: {
+        width: "160px",
+        height: "auto",
+        marginLeft: "2.5em"
+      }
+    },
+
+    menuBox: {
+      flexGrow: 1,
+      [theme.breakpoints.down("md")]: {
+        display: "none"
+      }
+    },
+
+    listContainer: {
+      listStyleType: "none",
+      display: "flex"
+    },
+
+    listElement: {
+      margin: "0 1em"
+    },
+
+    listLink: {
+      color: "#FFFFFF",
+      cursor: "pointer",
+      "&:hover": {
+        color: "#FFFFFF"
+      }
+    },
+
+    list: {
+      width: 250
+    },
+    fullList: {
+      width: "auto"
+    },
+
+    drawer: {
+      height: "100%",
+      color: "white",
+      background: "#121211"
     }
-  }
-});
+  });
 
 export default navbarsStyle;
