@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -23,7 +23,7 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/navba
 
 import ioledLogoNavbar from "./../../../assets/img/logo-ioled-navbar.png";
 
-class SectionNavbars extends React.Component {
+class SectionNavbars extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -93,8 +93,6 @@ class SectionNavbars extends React.Component {
                 <Typography className={classes.listLinkText}>VIDEO</Typography>
               </ListItem>
             </Link>
-
-            
 
             <Link
               activeClass="active"
@@ -173,7 +171,7 @@ class SectionNavbars extends React.Component {
                     <Typography className={classes.listLink}>VIDEO</Typography>
                   </Link>
                 </li>
-                
+
                 <li className={classes.listElement}>
                   <Link
                     activeClass="active"
