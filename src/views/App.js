@@ -14,12 +14,12 @@ export default function App() {
   return (
     <React.Fragment>
       <SectionNavbar />
-      {/* <SectionHeader />
+      <SectionHeader />
       <SectionWhatsIoled />
-      <SectionInformationParameters /> */}
+      <SectionInformationParameters />
       <SectionContact />
-      {/* <SectionVideo />
-      <SectionFooter /> */}
+      <SectionVideo />
+      <SectionFooter />
     </React.Fragment>
   );
 }
