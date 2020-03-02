@@ -3,7 +3,9 @@ import { TextField } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
+import axios from "axios";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/contactStyle.js";
 
@@ -12,11 +14,33 @@ class SectionContact extends Component {
     super(props);
     this.state = {
       name: "",
-      mail: "",
+      email: "",
       phone: "",
+      commune: "",
+      size: "",
       topic: ""
     };
   }
+
+  handleSubmit = async event => {
+    event.preventDefault();
+
+    const { name, email, phone, commune, size, topic } = this.state;
+
+    axios
+      .post("http://localhost:3001/create", {
+        name,
+        email,
+        phone,
+        commune,
+        size,
+        topic
+      })
+      .then(() => console.log("Mensaje enviado"))
+      .catch(err => {
+        console.error(err);
+      });
+  };
 
   render() {
     const { classes } = this.props;
@@ -28,7 +52,7 @@ class SectionContact extends Component {
           Contacto
         </Typography>
 
-        <form className={classes.form}>
+        <form className={classes.form} onSubmit={this.handleSubmit}>
           <Grid
             className={classes.textFieldsGrid}
             direction="column"
@@ -70,55 +94,93 @@ class SectionContact extends Component {
                 }
               }}
             />
+            <TextField
+              id="phone"
+              label="Teléfono"
+              value={this.state.phone}
+              onChange={e => this.setState({ phone: e.target.value })}
+              className={classes.textField}
+              InputLabelProps={{
+                classes: {
+                  root: classes.label,
+                  focused: classes.focusedLabel
+                }
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.underline
+                }
+              }}
+            />
+            <TextField
+              id="commune"
+              label="Comuna"
+              value={this.state.commune}
+              onChange={e => this.setState({ commune: e.target.value })}
+              className={classes.textField}
+              InputLabelProps={{
+                classes: {
+                  root: classes.label,
+                  focused: classes.focusedLabel
+                }
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.underline
+                }
+              }}
+            />
+
+            <TextField
+              id="size"
+              label="Tamaño del led"
+              value={this.state.size}
+              onChange={e => this.setState({ size: e.target.value })}
+              className={classes.textField}
+              InputLabelProps={{
+                classes: {
+                  root: classes.label,
+                  focused: classes.focusedLabel
+                }
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.underline
+                }
+              }}
+            />
+
+            <TextField
+              id="topic"
+              label="Asunto"
+              value={this.state.topic}
+              onChange={e => this.setState({ topic: e.target.value })}
+              className={classes.textField}
+              multiline
+              maxRows="3"
+              InputLabelProps={{
+                classes: {
+                  root: classes.label,
+                  focused: classes.focusedLabel
+                }
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.underline
+                }
+              }}
+            />
           </Grid>
-          <Grid
-            direction="row"
-            justify="center"
-            className={classes.textFieldsGrid2}
-          >
-            <Grid item md={12} className={classes.gridItem}>
-              <TextField
-                id="phone"
-                label="Teléfono"
-                value={this.state.phone}
-                onChange={e => this.setState({ phone: e.target.value })}
-                className={classes.textField2}
-                InputLabelProps={{
-                  classes: {
-                    root: classes.label,
-                    focused: classes.focusedLabel
-                  }
-                }}
-                InputProps={{
-                  classes: {
-                    root: classes.underline
-                  }
-                }}
-              />
-            </Grid>
-            <Grid item md={12} className={classes.gridItem}>
-              <TextField
-                id="topic"
-                label="Asunto"
-                value={this.state.topic}
-                onChange={e => this.setState({ topic: e.target.value })}
-                className={classes.textField2}
-                multiline
-                maxRows="3"
-                InputLabelProps={{
-                  classes: {
-                    root: classes.label,
-                    focused: classes.focusedLabel
-                  }
-                }}
-                InputProps={{
-                  classes: {
-                    root: classes.underline
-                  }
-                }}
-              />
-            </Grid>
-          </Grid>
+
+          <div className={classes.buttonBox}>
+            <Button
+              type="submit"
+              className={classes.button}
+              variant="contained"
+            >
+              Enviar
+            </Button>
+          </div>
         </form>
       </Box>
     );

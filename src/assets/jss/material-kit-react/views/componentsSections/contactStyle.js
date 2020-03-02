@@ -22,14 +22,7 @@ const navbarsStyle = theme =>
       }
     },
 
-    textFieldsGrid2: {
-      marginLeft: "3em",
-      marginRight: "3em"
-      // border: "1px solid green",
-    },
-
     gridItem: {
-      // border: "1px solid yellow",
       textAlign: "center"
     },
 
@@ -49,21 +42,11 @@ const navbarsStyle = theme =>
     },
 
     textField: {
-      width: "25%",
-      margin: "1em",
-      [theme.breakpoints.down("sm")]: {
-        width: "40%"
-      }
-      // border: "1px solid blue"
-    },
-
-    textField2: {
-      width: "50%",
+      width: "35%",
       margin: "1em",
       [theme.breakpoints.down("sm")]: {
         width: "70%"
       }
-      // border: "1px solid blue"
     },
 
     label: {
@@ -87,6 +70,52 @@ const navbarsStyle = theme =>
 
       "&:after": {
         borderBottom: `1px solid cyan`
+      }
+    },
+
+    buttonBox: {
+      display: "flex",
+      paddingTop: "1em",
+
+      [theme.breakpoints.up("xs")]: {
+        paddingTop: "0.5em"
+      },
+
+      [theme.breakpoints.up("sm")]: {
+        paddingTop: "0.8em"
+      }
+    },
+
+    button: {
+      marginLeft: "auto",
+      marginRight: "auto",
+      borderRadius: "30px",
+      color: "white",
+      background: "transparent",
+      verticalAlign: "middle",
+      padding: "0.1em 0",
+
+      "&:hover": {
+        color: "#00EAA6",
+        borderColor: "#00EAA6",
+        background: "transparent"
+      },
+
+      [theme.breakpoints.up("xs")]: {
+        width: "9em",
+        fontSize: "0.7em",
+        border: "1px solid #00EAA6"
+      },
+
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "0.8em",
+        border: "2px solid #00EAA6"
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "0.9em"
+      },
+      [theme.breakpoints.up("lg")]: {
+        fontSize: "1em"
       }
     }
   });
