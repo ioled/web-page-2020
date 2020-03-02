@@ -16,9 +16,9 @@ export default function App() {
       <SectionNavbar />
       <SectionHeader />
       <SectionWhatsIoled />
-      <SectionVideo />
-      <SectionContact />
       <SectionInformationParameters />
+      <SectionContact />
+      <SectionVideo />
       <SectionFooter />
     </React.Fragment>
   );

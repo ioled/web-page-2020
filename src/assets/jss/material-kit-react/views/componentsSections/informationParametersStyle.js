@@ -1,6 +1,7 @@
 const informationParametersStyles = theme => ({
   gridContainer: {
     background: "#FFFFFF",
+    borderTop: "1px solid #121211",
     padding: "2em",
     [theme.breakpoints.down("xs")]: { padding: "0 1em" }
   },

@@ -14,6 +14,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import InfoIcon from "@material-ui/icons/Info";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
 
 import { Link } from "react-scroll";
 
@@ -81,21 +82,6 @@ class SectionNavbars extends Component {
 
             <Link
               activeClass="active"
-              to="video"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={this.toggleDrawer(false)}
-            >
-              <ListItem className={classes.listLinkResponsive}>
-                <PlayArrowIcon />
-                <Typography className={classes.listLinkText}>VIDEO</Typography>
-              </ListItem>
-            </Link>
-
-            <Link
-              activeClass="active"
               to="information-parameters"
               spy={true}
               smooth={true}
@@ -108,6 +94,38 @@ class SectionNavbars extends Component {
                 <Typography className={classes.listLinkText}>
                   BENEFICIOS
                 </Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
+            >
+              <ListItem className={classes.listLinkResponsive}>
+                <ContactMailIcon />
+                <Typography className={classes.listLinkText}>
+                  CONTACTO
+                </Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="video"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
+            >
+              <ListItem className={classes.listLinkResponsive}>
+                <PlayArrowIcon />
+                <Typography className={classes.listLinkText}>VIDEO</Typography>
               </ListItem>
             </Link>
           </List>
@@ -162,19 +180,6 @@ class SectionNavbars extends Component {
                 <li className={classes.listElement}>
                   <Link
                     activeClass="active"
-                    to="video"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    <Typography className={classes.listLink}>VIDEO</Typography>
-                  </Link>
-                </li>
-
-                <li className={classes.listElement}>
-                  <Link
-                    activeClass="active"
                     to="information-parameters"
                     spy={true}
                     smooth={true}
@@ -184,6 +189,32 @@ class SectionNavbars extends Component {
                     <Typography className={classes.listLink}>
                       BENEFICIOS
                     </Typography>
+                  </Link>
+                </li>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>
+                      CONTACTO
+                    </Typography>
+                  </Link>
+                </li>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="active"
+                    to="video"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>VIDEO</Typography>
                   </Link>
                 </li>
               </ul>
