@@ -4,7 +4,7 @@ const navbarsStyle = theme =>
   createStyles({
     container: {
       background: "#121211",
-      padding: "3em 0"
+      padding: "4em 0"
     },
 
     form: {
