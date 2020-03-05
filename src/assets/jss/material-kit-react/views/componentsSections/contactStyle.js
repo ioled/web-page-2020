@@ -31,7 +31,7 @@ const navbarsStyle = theme =>
       textAlign: "center",
       fontWeight: "bold",
       [theme.breakpoints.up("xs")]: {
-        fontSize: "1.2em"
+        fontSize: "1.6em"
       },
       [theme.breakpoints.up("sm")]: {
         fontSize: "1.8em"
@@ -45,7 +45,9 @@ const navbarsStyle = theme =>
       width: "35%",
       margin: "1em",
       [theme.breakpoints.down("sm")]: {
-        width: "70%"
+        height: 30,
+        width: "70%",
+        fontSize: "0.7em"
       }
     },
 
@@ -53,7 +55,8 @@ const navbarsStyle = theme =>
       "&$focusedLabel": {
         color: "#00EAA6"
       },
-      color: "#00EAA6"
+      color: "#00EAA6",
+      fontSize: "15px"
     },
     focusedLabel: {},
 
@@ -75,6 +78,7 @@ const navbarsStyle = theme =>
 
     buttonBox: {
       display: "flex",
+      margin: "1em",
       paddingTop: "1em",
 
       [theme.breakpoints.up("xs")]: {
@@ -103,7 +107,7 @@ const navbarsStyle = theme =>
 
       [theme.breakpoints.up("xs")]: {
         width: "9em",
-        fontSize: "0.7em",
+        fontSize: "0.8em",
         border: "1px solid #00EAA6"
       },
 
