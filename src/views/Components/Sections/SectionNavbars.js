@@ -1,116 +1,247 @@
-import React from "react";
-// MATERIAL UI
-//Material ui components
-import { makeStyles } from "@material-ui/core/styles";
+import React, { Component } from "react";
+
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import Box from "@material-ui/core/Box";
+import Drawer from "@material-ui/core/Drawer";
+import Typography from "@material-ui/core/Typography";
 
-// MATERIAL UI
-//Material ui icons
+import HomeIcon from "@material-ui/icons/Home";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import InfoIcon from "@material-ui/icons/Info";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
 
-// import Email from "@material-ui/icons/Email";
-import Header from "components/Header/Header.js";
-// import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
-import Button from "components/CustomButtons/Button.js";
+import { Link } from "react-scroll";
 
-//STYLES***
-//This importation looks like it has something to see with css/styles
+import { withStyles } from "@material-ui/core/styles";
+
 import styles from "assets/jss/material-kit-react/views/componentsSections/navbarsStyle.js";
 
-//LOGO IMAGE NAVBAR
-//Import image logo-ioled-navbar as a React Component
 import ioledLogoNavbar from "./../../../assets/img/logo-ioled-navbar.png";
 
-//MAKESTYLES
-//Makestyles to edit styles with React
-const useStyles = makeStyles(styles);
+class SectionNavbars extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      right: false
+    };
+  }
 
-//REACT
-//Export the function SectionNavbars and return some JSX Code
-export default function SectionNavbars() {
-  const classes = useStyles();
+  toggleDrawer = open => event => {
+    this.setState({ drawerRight: open });
+  };
 
-  //REACT
-  //Components created with functions doesn't need render() method.
-  return (
-    <Header
-      color="dark"
-      leftLinks={
-        <img
-          src={ioledLogoNavbar}
-          alt="ioled-logo-navbar"
-          className={classes.ioledLogoNavbar}
-        />
-      }
-      rightLinks={
-        <List className={classes.list}>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="#pablo"
-              className={classes.navLink}
-              onClick={e => e.preventDefault()}
-              color="transparent"
+  sideList = () => {
+    const { classes } = this.props;
+
+    return (
+      <div
+        className={classes.drawer}
+        role="presentation"
+        onClick={this.toggleDrawer(false)}
+        onKeyDown={this.toggleDrawer(false)}
+      >
+        <Box>
+          <List component="nav">
+            <Link
+              activeClass="active"
+              to="header"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
             >
-              Inicio
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="#pablo"
-              className={classes.navLink}
-              onClick={e => e.preventDefault()}
-              color="transparent"
+              <ListItem className={classes.listLinkResponsive}>
+                <HomeIcon />
+                <Typography className={classes.listLinkText}>INICIO</Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="whats-ioled"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
             >
-              Sobre iOLED
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="#pablo"
-              className={classes.navLink}
-              onClick={e => e.preventDefault()}
-              color="transparent"
+              <ListItem className={classes.listLinkResponsive}>
+                <InfoIcon />
+                <Typography className={classes.listLinkText}>
+                  SOBRE NOSOTROS
+                </Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="information-parameters"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
             >
-              Servicios
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="#pablo"
-              className={classes.navLink}
-              onClick={e => e.preventDefault()}
-              color="transparent"
+              <ListItem className={classes.listLinkResponsive}>
+                <AttachMoneyIcon />
+                <Typography className={classes.listLinkText}>
+                  BENEFICIOS
+                </Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
             >
-              Desarrollo
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="#pablo"
-              className={classes.navLink}
-              onClick={e => e.preventDefault()}
-              color="transparent"
+              <ListItem className={classes.listLinkResponsive}>
+                <ContactMailIcon />
+                <Typography className={classes.listLinkText}>
+                  CONTACTO
+                </Typography>
+              </ListItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="video"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={this.toggleDrawer(false)}
             >
-              Contacto
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              href="#pablo"
-              className={classes.navLink}
-              onClick={e => e.preventDefault()}
-              color="transparent"
+              <ListItem className={classes.listLinkResponsive}>
+                <PlayArrowIcon />
+                <Typography className={classes.listLinkText}>VIDEO</Typography>
+              </ListItem>
+            </Link>
+          </List>
+        </Box>
+      </div>
+    );
+  };
+
+  render() {
+    const { classes } = this.props;
+    const { drawerRight } = this.state;
+    return (
+      <React.Fragment id="navbar">
+        <AppBar display="block" position="fixed">
+          <Toolbar className={classes.toolbar}>
+            <Box className={classes.titleBox}>
+              <img
+                src={ioledLogoNavbar}
+                alt="ioled-logo"
+                className={classes.ioledLogo}
+              />
+            </Box>
+
+            <Box className={classes.menuBox}>
+              <ul className={classes.listContainer}>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="fixed"
+                    to="header"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>INICIO</Typography>
+                  </Link>
+                </li>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="active"
+                    to="whats-ioled"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>
+                      SOBRE NOSOTROS
+                    </Typography>
+                  </Link>
+                </li>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="active"
+                    to="information-parameters"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>
+                      BENEFICIOS
+                    </Typography>
+                  </Link>
+                </li>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>
+                      CONTACTO
+                    </Typography>
+                  </Link>
+                </li>
+                <li className={classes.listElement}>
+                  <Link
+                    activeClass="active"
+                    to="video"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <Typography className={classes.listLink}>VIDEO</Typography>
+                  </Link>
+                </li>
+              </ul>
+            </Box>
+
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+              onClick={this.toggleDrawer(true)}
             >
-              Blog
-            </Button>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button className={classes.miioled} type="button">
-              Mi iOLED
-            </Button>
-          </ListItem>
-        </List>
-      }
-    />
-  );
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+
+        <Drawer
+          anchor="right"
+          open={drawerRight}
+          onClose={this.toggleDrawer(false)}
+        >
+          {this.sideList()}
+        </Drawer>
+      </React.Fragment>
+    );
+  }
 }
+
+export default withStyles(styles)(SectionNavbars);
